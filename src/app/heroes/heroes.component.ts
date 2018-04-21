@@ -12,6 +12,10 @@ export class HeroesComponent implements OnInit {
     constructor(private heroService: HeroService) { }
 
     ngOnInit() {
+        this.getHeroes();
+    }
+
+    getHeroes(): void {
         this.heroes = this.heroService.getHeroes();
     }
 
@@ -23,7 +27,7 @@ export class HeroesComponent implements OnInit {
 
     /*
       trigger: when the the hero is selected
-     */
+    */
     onSelect(hero: Hero): void {
         if(this.heroes.indexOf(hero) > -1) {
             if(hero !== this.selectedHero) {
