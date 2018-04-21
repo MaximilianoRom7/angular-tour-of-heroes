@@ -3,7 +3,7 @@
     <button class="clear"
             (click)="messageService.clear()">clear</button>
     <div *ngIf="messageService.messages.length">
-        <div *ngFor='let message of messageService.messages'>
+        <div *ngFor='let message of messages_filtered'>
             {{message}}
         </div>
     </div>
