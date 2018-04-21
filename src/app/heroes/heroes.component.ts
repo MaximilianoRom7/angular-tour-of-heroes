@@ -16,4 +16,16 @@ export class HeroesComponent implements OnInit {
     /* a mock object */
     heroes: Hero[] = HEROES;
 
+    /*
+      trigger: when the the hero is selected
+     */
+    onSelect(hero: Hero): void {
+        if(this.heroes.indexOf(hero) > -1) {
+            console.log(`Hero ${hero.id} selected`);
+            this.selectedHero = hero;
+        }
+        else
+            console.log(`Hero ${hero && hero.id} selected does not exist`);
+    }
+
 }
