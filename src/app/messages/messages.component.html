@@ -1,8 +1,10 @@
-<span>Messages</span>
-<button class="clear"
-        (click)="messageService.clear()">clear</button>
-<div *ngIf="messageService.messages.length">
-    <div *ngFor='let message of messageService.messages'>
-        {{message}}
+<div class="red-border messages">
+    <span>Messages</span>
+    <button class="clear"
+            (click)="messageService.clear()">clear</button>
+    <div *ngIf="messageService.messages.length">
+        <div *ngFor='let message of messageService.messages'>
+            {{message}}
+        </div>
     </div>
 </div>

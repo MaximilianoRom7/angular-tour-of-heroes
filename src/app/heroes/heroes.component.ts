@@ -34,13 +34,13 @@ export class HeroesComponent implements OnInit {
     onSelect(hero: Hero): void {
         if(this.heroes.indexOf(hero) > -1) {
             if(hero !== this.selectedHero) {
-                this.messageService.add(`Hero ${hero.id} changed`);
+                this.messageService.add(`Hero ${hero.name} changed`);
                 this.selectedHero = hero;
             }
-            this.messageService.add(`Hero ${hero.id} selected`);
+            this.messageService.add(`Hero ${hero.name} selected`);
         }
         else
-            this.messageService.add(`Hero ${hero && hero.id} selected does not exist`);
+            this.messageService.add(`Hero ${hero && hero.name} selected does not exist`);
     }
 
 }
